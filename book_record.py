@@ -1,4 +1,4 @@
-from bottle import run, redirect, request, route, template
+from bottle import run, redirect, request, route, template, static_file
 import sqlite3
 
 book_db = "sample_book.db"
@@ -25,6 +25,32 @@ def get_list():
         })
     conn.close()
     return books
+
+
+@route("/add_book")
+def add_book():
+    return template('book_add')
+
+
+# Static file
+@route("/static/<filename:path>")
+def css(filename):
+    return static_file(filename, root="./static")
+
+
+@route("/static/font/<filename:re:.*\.(eot|otf|svg|ttf|woff|woff2?)>")
+def font(filename):
+    return static_file(filename, root="static/font")
+
+
+@route("/static/img/<filename:re:.*\.(jpg|png|gif|ico|svg)>")
+def img(filename):
+    return static_file(filename, root="./static/img")
+
+
+@route("/static/js/<filename:re:.*\.js>")
+def js(filename):
+    return static_file(filename, root="static/js")
 
 
 run(host='localhost', port=8080, debug=True)

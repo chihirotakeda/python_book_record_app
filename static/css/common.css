@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+body {
+    background: #fbf9cc url(../img/s_GettyImages-944846292.jpg);
+}
+
+h1 {
+    color: #696969;
+    font-family: Arial;
+}
+
+header, footer, nav {
+    text-align: center;
+}
+
+.nav1 li {
+    list-style-type: none;
+    display: inline-block;
+    width: 180px;
+    margin: 0 10px;
+}
+
+.nav1 a {
+    background: #ffeeee;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+    color: #696969;
+    display: block;
+    font-family: Arial;
+}
+
+#contents {
+    width: 960px;
+    margin: 40px auto;
+    padding: 40px 80px;
+    border: 1px solid #f6bb9e;
+    background-color: #fff;
+    font-family: Arial;
+    color: #696969;
+
+}
+.newbookBtn {
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    background: #fadccc;
+    border: 2px solid #f6bb9e;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #696969;
+}
+
+.bookTable {
+    width: 100%;
+    margin-top: 10px;
+    border: 2px solid #f6bb9e;
+    border-collapse: collapse;
+    font-family: Arial;
+    color: #696969;
+}
+
+.bookTable th,
+.bookTable td {
+    padding: 10px 10px;
+    border: 1px solid #f6bb9e;
+}
+
+.bookTable th {
+    width: 10em;
+    background-color: #ffeeee;
+}
+
+#bookform label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+#bookform input {
+    width: 400px;
+    padding: 8px 8px;
+
+}

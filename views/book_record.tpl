@@ -4,11 +4,22 @@
 <head>
     <meta charset="utf-8">
     <title>Book record</title>
+    <link href="../static/css/common.css" rel="stylesheet" media="all">
 </head>
 <body>
+<header>
     <h1>Book List</h1>
-    <button type="button" name="add_book" value="add" onclick="location.href='/add_book'">New Book</button>
-    <table border=1>
+</header>
+<nav>
+<ul class="nav1">
+    <li><a href="">Home</a></li>
+    <li><a href="/book_list">Book List</a></li>
+    <li><a href="">item3</a></li>
+</ul>
+</nav>
+<main id="contents">
+    <button class="newbookBtn" type="button" name="add_book" value="add" onclick="location.href='/add_book'">New Book</button>
+    <table class="bookTable">
         <tr>
             <th>Title</th>
             <th>Volume</th>
@@ -28,4 +39,5 @@
         <tr>
         %end
     </table>
+    </main>
 </body>

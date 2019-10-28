@@ -2,32 +2,45 @@
 <head>
     <meta charset='utf-8'>
     <title></title>
+    <link href="../static/css/common.css" rel="stylesheet" media="all">
 </head>
 <body>
+<header>
     <h1>Add a new book</h1>
         <p>Enter book info</p>
+    </header>
+<nav>
+    <ul class="nav1">
+        <li><a href="/book_list">Home</a></li>
+        <li><a href="/book_list">Book List</a></li>
+        <li><a href="">item3</a></li>
+    </ul>
+</nav>
+<main id="contents">
+    <p>Enter book info</p>
 <form>
-    <div>
+    <div id="bookform">
         <div>
             <label for='title'>Title</label>
-            <input type='text' id ='title' name='title'>
+            <input type='text' id ='title' name='title' placeholder="Alice's Adventures in Wonderland">
         </div>
         <div>
             <label for='volume'>Volume</label>
-            <input type='text' id ='volume' name='volume'>
+            <input type='text' id ='volume' name='volume' placeholder="1">
         </div>
         <div>
             <label for='text'>Author</label>
-            <input type='text' id="text" name='author'>
+            <input type='text' id="text" name='author' placeholder="Lewis Carroll">
         </div>
         <div>
             <label for="publisher">Publisher</label>
-            <input type='text' id="publisher" name='publisher'>
+            <input type='text' id="publisher" name='publisher' placeholder="Penguin Random House">
         </div>
         <div>
             <label for="memo">Memo</label>
-            <input type='text' id="memo" name='memo'>
+            <textarea  id="memo" name='memo' rows="8" cols="52"></textarea>
         </div>
     </div>
 </form>
+    </main>
 </body>
