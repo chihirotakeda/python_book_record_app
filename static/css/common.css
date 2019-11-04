@@ -20,6 +20,9 @@ body {
     line-height: 1.5;
 }
 
+.header-image {
+}
+
 .site {
     margin: 0 auto;
     max-width: 1180px;
@@ -52,6 +55,11 @@ header, footer, nav {
     display: block;
 }
 
+.info, .widget-area, .book-list {
+    margin: 0 40px;
+
+}
+
 .site-title {
     color: #333;
     font-size: 3.6rem;
@@ -59,9 +67,31 @@ header, footer, nav {
     margin-bottom: 0;
 }
 
+.wigit-title-2 {
+    font-family: "brandon-grotesque",sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    text-align: center;
+    padding: 10px 10px 7px 10px;
+}
+
+.wigit-title-1 {
+    text-align: center;
+    font-family: "brandon-grotesque",sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
 .nav1 {
     background-color: #f25f70;
     border-bottom: 2px solid rgb(0,0,0,.15);
+    margin-bottom: 15px;
     color: #fff;
     display: block;
     padding: .25em 55px;
@@ -102,6 +132,9 @@ header, footer, nav {
     color: #ffa4ad;
     content: " \2022";
     margin-left: 1em;
+}
+
+.info {
 }
 
 #contents {
@@ -155,4 +188,95 @@ header, footer, nav {
     width: 400px;
     padding: 8px 8px;
 
+}
+
+#current-book {
+    background-color: palegreen;
+    margin-right: 1%;
+    margin-bottom: 15px;
+    float: left;
+    width: 46%;
+}
+
+#progress {
+    background-color: #fff;
+    border:1px solid #f6f5f3;
+    box-sizing: border-box;
+    margin-right: 1%;
+    float: left;
+    width: 32%;
+}
+
+#profile {
+    background-color: #fff;
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+    border: 14px solid #f6f5f3;
+    padding: 10px 10px 6px 10px;
+}
+
+#profile h2 {
+    text-align: center;
+
+}
+
+#profile::after {
+    clear: both;
+}
+
+.book-list {
+    clear: both;
+    background-color: lightyellow;
+}
+.book-list li {
+    display: inline;
+}
+
+.book-list h2 {
+    font-family:
+    padding: 10px 40px;
+
+}
+
+.widget-area {
+}
+
+.widget-area #widget-area-1 {
+    background-color: lavender;
+    float:left;
+    width: 30%;
+    margin-right: 5%;
+}
+
+.widget-area #widget-area-2 {
+    background-color: skyblue;
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+
+.widget-area #widget-area-3 {
+    background-color: coral;
+    float: left;
+    width: 30%;
+}
+
+.title-divider {
+    border-top: 1px solid;
+    color: #e89f9b;
+    display: block;
+    max-width: 48px;
+    margin: 0 auto 15px;
+}
+
+.about-widget {
+    text-align: center;
+    font-size: 12px;
+
+}
+
+.about-img {
+    display: inline-block;
+    height: auto;
 }
