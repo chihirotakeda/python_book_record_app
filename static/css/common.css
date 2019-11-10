@@ -56,7 +56,7 @@ header, footer, nav {
 }
 
 .info, .widget-area, .book-list {
-    margin: 0 40px;
+    margin-bottom: 20px;
 
 }
 
@@ -67,25 +67,36 @@ header, footer, nav {
     margin-bottom: 0;
 }
 
-.wigit-title-2 {
+.wigit-title-1, .wigit-title-2, .wigit-title-3, .sub-title {
     font-family: "brandon-grotesque",sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 400;
-    font-size: 12px;
-    margin-top: 10px;
-    margin-bottom: 2px;
     text-align: center;
+    font-weight: 400;
+
+}
+
+.wigit-title-2 {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 2px;
     padding: 10px 10px 7px 10px;
 }
 
 .wigit-title-1 {
-    text-align: center;
-    font-family: "brandon-grotesque",sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
     margin-bottom: 10px;
+}
+
+.wigit-title-3 {
+    margin-top: 18px;
+    margin-bottom: 0;
+
+}
+
+.sub-title {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 2px;
 }
 
 .nav1 {
@@ -132,9 +143,6 @@ header, footer, nav {
     color: #ffa4ad;
     content: " \2022";
     margin-left: 1em;
-}
-
-.info {
 }
 
 #contents {
@@ -191,7 +199,9 @@ header, footer, nav {
 }
 
 #current-book {
-    background-color: palegreen;
+    background-color: #fff;
+    border: solid 1px #eee;
+    box-sizing: border-box;
     margin-right: 1%;
     margin-bottom: 15px;
     float: left;
@@ -204,13 +214,13 @@ header, footer, nav {
     box-sizing: border-box;
     margin-right: 1%;
     float: left;
-    width: 32%;
+    width: 27%;
 }
 
 #profile {
     background-color: #fff;
     float: left;
-    width: 20%;
+    width: 25%;
     box-sizing: border-box;
     border: 14px solid #f6f5f3;
     padding: 10px 10px 6px 10px;
@@ -227,15 +237,15 @@ header, footer, nav {
 
 .book-list {
     clear: both;
-    background-color: lightyellow;
+    background-color: #fff;
 }
 .book-list li {
     display: inline;
+    margin-right: 20px;
 }
 
 .book-list h2 {
-    font-family:
-    padding: 10px 40px;
+    padding-top: 20px;
 
 }
 
@@ -279,4 +289,87 @@ header, footer, nav {
 .about-img {
     display: inline-block;
     height: auto;
+}
+
+.progress-widgit {
+    text-align: center;
+}
+
+.progress-ratio {
+    display: inline-block;
+    font-size: 3.6rem;
+    color: #e89f9b;
+    text-align: center;
+    width: 100%;
+
+}
+
+.progress-ratio p {
+    margin: 10px 0 15px 0;
+}
+
+.progress-circle {
+    width: 180px;
+    height: auto;
+    margin: auto;
+
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 2;
+}
+
+.percentage {
+    text-anchor: middle;
+    font-size: 1rem;
+    fill: #e89f9b;
+}
+
+.book-info {
+    line-height: 120%;
+    margin-bottom: 10px;
+    float:left;
+    width: 70%;
+}
+
+.book-img {
+    float: left;
+    width: 30%;
+    margin-left: 5%;
+}
+
+.book-summary {
+    width: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
+    float: left;
+    text-align: center;
+}
+
+.book-detail {
+    margin-bottom: 8px;
+    line-height: 150%;
+}
+#book-list-inner {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#book-list-inner img {
+    height:160px;
+}
+
+.wigit-area-blog {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.book-reference {
+    font-size: 1.2rem;
+
 }

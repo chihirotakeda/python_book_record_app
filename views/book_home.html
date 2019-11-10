@@ -21,62 +21,147 @@
         </ul>
     </nav>
     <div class="header-image">
+        <img class="header-img" src="../static/img/radu-marcusu-mbKApJz6RSU-unsplash.jpg" width="1180">
     </div>
 </header>
 <div class="info">
     <section id="current-book">
-        <h2 class="wigit-title-1">Current Book </h2>
-        <p>bookbookbookbookbook</p>
-        <p>bookbookbookbookbook</p>
-        <p>bookbookbookbookbook</p>
-        <p>bookbookbookbookbook</p>
-        <p>bookbookbookbookbook</p>
+        <h2 class="wigit-title-1">Currently Reading </h2>
+        <span class="title-divider"></span>
+        <!--<div class="book-wigit">
+            <div class="book-img">
+                <img src="../static/img/alex-loup-2zDw14yCYqk-unsplash.jpg" width="150" height="200">
+            </div>
+            <div class="book-summary">
+                <h4 class="wigit-title-2">Book Title</h4>
+                <p>bookbookbookbookbook</p>
+                <p>bookbookbookbookbook</p>
+                <p>bookbookbookbookbook</p>
+                <p>bookbookbookbookbook</p>
+                <p>bookbookbookbookbook</p>
+            </div>
+        </div> -->
+        <div class="amazlet-box" style="margin-bottom: 0px; margin-top: 25px;">
+            <div class="amazlet-image" style="float: left; margin: 0px 20px 1px 35px;">
+                <a href="{{book_info[4]}}" target="_blank" rel="noopener"
+                    name="amazletlink">
+                <img style="border: none;"
+                     src="{{book_info[3]}}"
+                     alt="Pride and Prejudice (Penguin Classics)"/>
+                </a>
+            </div>
+            <div class="book-info">
+                <div class="book-detail">
+                    <a href="{{book_info[4]}}" target="_blank" rel="noopener"
+                       name="amazletlink">{{book_info[0]}}</a> by {{book_info[1]}}
+                    </br> {{book_info[2]}}
+                </div>
+                <div>
+                    <p>{{book_description}}
+                    <a class="book-reference" href="{{book_info[4]}}" target="_blank">See more at Goodreads</a></p>
+                </div>
+                <div class="book-sub-info" style="float: left;">
+                </div>
+	        </div>
+<div class="amazlet-footer" style="clear: left;">&nbsp;</div>
+</div>
     </section>
     <section id="progress">
         <h2 class="wigit-title-1"> Progress</h2>
         <span class="title-divider"></span>
-        <p>bookbookbookbookbook</p>
-        <p>bookbookbookbookbook</p>
-        <p>bookbookbookbookbook</p>
-        <p>bookbookbookbookbook</p>
-        <p>bookbookbookbookbook</p>
+        <div class="progress-widgit">
+            <div class="progress-circle">
+                <svg viewBox="0 0 36 36">
+                    <path class="circle-bg"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+
+                    <path
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                            fill="none"
+                            stroke="#f9c790";
+                            stroke-width="1.4";
+                            stroke-dasharray="10, 100"
+                            />
+                    <text x="18" y="20.35" class="percentage">10%</text>
+                </svg>
+            </div>
+        </div>
+        <div class="progress-ratio">
+            <p>10 / 100</p>
+        </div>
     </section>
     <section id="profile">
         <h4 class="wigit-title-2">About me</h4>
         <span class="title-divider"></span>
         <div class="about-widget">
             <div>
-                <img class=".about-img" src="../static/img/carolyn-v-zP6KAN1OtQk-unsplash.jpg" alt="about me" width="150"></img>
+                <img class=".about-img" src="../static/img/carolyn-v-zP6KAN1OtQk-unsplash.jpg" alt="about me" width="180"></img>
             </div>
             <div>
-                <p>Love reading the classics.</p>
+                <p>Love reading the classics.<br> Favorite books: Pride and Prejudice, Anna Karenina, Jane Eyre, Momo, Alice
+                's adventure in wonderland, Adventure of Sherlock Holmes</p>
             </div>
+        </div>
     </section>
 </div>
     <div class="book-list">
-        <h2>Book List</h2>
-        <ul>
-            <li>book</li>
-            <li>book</li>
-            <li>book</li>
-            <li>book</li>
-            <li>book</li>
-        </ul>
+        <h2 class="wigit-title-1">Book List</h2>
+        <span class="title-divider"></span>
+        <div id="book-list-inner">
+            <ul>
+                <li><img src="https://images-fe.ssl-images-amazon.com/images/I/41dTfpdTZXL._SL160_.jpg" alt="Sense and Sensibility (Penguin Classics)" style="border: none;" />
+</li>
+                <li><img src="https://images-fe.ssl-images-amazon.com/images/I/41kxdFpjryL._SL160_.jpg" alt="The Adventures of Tom Sawyer (Penguin Classics)" style="border: none;"/></li>
+                <li><img src="https://images-fe.ssl-images-amazon.com/images/I/510AADA6GEL._SL160_.jpg" alt="豊饒の海 第一巻 春の雪 (新潮文庫)" style="border: none;" />
+</li>
+                <li><a href="https://www.goodreads.com/book/show/88077.The_Magic_Mountain?from_search=true&qid=YIEZ1SEKhB&rank=1" target="_blank">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1403170928l/88077.jpg" alt="The Magic Mountain" height="160" style="border: none;" />
+                </a>
+                </li>
+                <li><a href="https://www.goodreads.com/book/show/12749.Swann_s_Way?ac=1&from_search=true&qid=jW0ztcklQx&rank=1" target="_blank">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1452956236l/12749._SY475_.jpg" alt="Swann's Way" height="160" style="border: none;"/></a></li>
+
+                <li><a href="https://www.goodreads.com/book/show/320.One_Hundred_Years_of_Solitude" target="_blank">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327881361l/320.jpg" alt="One Hundread Years of Solitude" style="border: none;" /></a>
+</li>
+                <li><a href="https://www.goodreads.com/book/show/9328.The_House_of_the_Spirits" target="_blank">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1358615501l/9328.jpg" alt="Sense and Sensibility (Penguin Classics)" style="border: none;" />
+                </a>
+</li>
+                <li><img src="{{book_info[3]}}" alt="The Adventures of Tom Sawyer (Penguin Classics)" style="border: none;"/></li>
+            </ul>
+        </div>
     </div>
     <div class="widget-area front-widget-area">
         <div id="widget-area-1">
-            <h3>Book Title</h3>
-            <p>bookbookbookbookbook</p>
-            <p>bookbookbookbookbook</p>
-            <p>bookbookbookbookbook</p>
-            <p>bookbookbookbookbook</p>
-            <p>bookbookbookbookbook</p>
+            <h3 class="wigit-title-3">Blog Title</h3>
+            <h4 class="sub-title">Book Title</h4>
+            <span class="title-divider"></span>
+            <div class="wigit-area-blog">
+            <p>book bookbook bookbook bookbook bookbookbookbookbook bookbookbook bookbookbookbookbookbook bookbookbookbookbook bookbookbookbook</p>
+            </div>
         </div>
         <div id="widget-area-2">
-            <h3>Book Title</h3>
+            <h3 class="wigit-title-3">Blog Title</h3>
+            <h4 class="sub-title">Book Title</h4>
+            <span class="title-divider"></span>
+            <div class="wigit-area-blog">
+            <p>book bookbook bookbook bookbook bookbookbookbookbook bookbookbook bookbookbookbookbookbook bookbookbookbookbook bookbookbookbook</p>
+            </div>
+
         </div>
         <div id="widget-area-3">
-            <h3>Book Title</h3>
+            <h3 class="wigit-title-3">Book Title</h3>
+            <h4 class="sub-title">Book Title</h4>
+            <span class="title-divider"></span>
+            <div class="wigit-area-blog">
+            <p>book bookbook bookbook bookbook bookbookbookbookbook bookbookbook bookbookbookbookbookbook bookbookbookbookbook bookbookbookbook</p>
+            </div>
         </div>
     </div>
 </div>

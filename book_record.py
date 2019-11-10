@@ -1,5 +1,6 @@
 from bottle import run, redirect, request, route, template, static_file
 import sqlite3
+from goodreads import client
 
 book_db = "sample_book.db"
 
@@ -30,6 +31,32 @@ def get_list():
 @route("/add_book")
 def add_book():
     return template('book_add')
+
+
+@route("/book_home")
+def show_current_book_info():
+    book_info = get_basic_book_info("0141040343")
+    book_description = get_book_description("0141040343")
+    return template('book_home', book_info=book_info, book_description=book_description)
+
+
+def get_basic_book_info(isbn):
+    gc = client.GoodreadsClient("QSaZ6iPhVmKVYUMN5rzCfw", "5v8xoxLgyMCbcuNGBgiWo8xkhqnfctEWF20r6Xdas")
+    book = gc.book(None, isbn)
+    title = book.title
+    author = book.authors[0]
+    publisher = book.publisher
+    img_url = book.image_url
+    book_link = book.link
+    book_info = [title, author, publisher, img_url, book_link]
+    return book_info
+
+
+def get_book_description(isbn):
+    gc = client.GoodreadsClient("QSaZ6iPhVmKVYUMN5rzCfw", "5v8xoxLgyMCbcuNGBgiWo8xkhqnfctEWF20r6Xdas")
+    book = gc.book(None, isbn)
+    description = book.description
+    return description
 
 
 # Static file
