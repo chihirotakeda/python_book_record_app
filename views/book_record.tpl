@@ -25,20 +25,18 @@
     <button class="newbookBtn" type="button" name="add_book" value="add" onclick="location.href='/add_book'">New Book</button>
     <table class="bookTable">
         <tr>
+            <th>Book</th>
             <th>Title</th>
-            <th>Volume</th>
             <th>Author</th>
-            <th>Publisher</th>
-            <th>Memo</th>
+            <th>ISBN</th>
             <th>Action</th>
         </tr>
        %for book in books:
         <tr>
+            <td><img src="{{book["img"]}}" alt="book{{["title"]}}"></td>
             <td>{{book["title"]}}</td>
-            <td>{{book["volume"]}}</td>
             <td>{{book["author"]}}</td>
-            <td>{{book["publisher"]}}</td>
-            <td>{{book["memo"]}}</td>
+            <td>{{book["isbn"]}}</td>
             <td><a href="/book_del/{{book["title"]}}">remove</a></td>
         <tr>
         %end
