@@ -15,14 +15,15 @@ def book_list():
 def get_list():
     conn = sqlite3.connect(book_db)
     c = conn.cursor()
-    c.execute("SELECT title, author, isbn, image_url FROM book_info")
+    c.execute("SELECT title, author, isbn, image_url, link FROM book_info")
     books = []
     for row in c.fetchall():
         books.append({
             "title": row[0],
             "author": row[1],
             "isbn": row[2],
-            "img": row[3]
+            "img": row[3],
+            "link": row[4]
         })
     conn.close()
     return books
@@ -35,9 +36,10 @@ def add_book():
 
 @route("/book_home")
 def show_current_book_info():
-    book_info = get_basic_book_info("0141040343")
-    book_description = get_book_description("0141040343")
-    return template('book_home', book_info=book_info, book_description=book_description)
+    book_info = get_basic_book_info("0679772871")
+    book_description = get_book_description("0679772871")
+    book_img = get_book_list_img()
+    return template('book_home', book_info=book_info, book_description=book_description, book_img=book_img)
 
 
 def get_basic_book_info(isbn):
@@ -58,6 +60,16 @@ def get_book_description(isbn):
     description = book.description
     return description
 
+
+def get_book_list_img():
+    conn = sqlite3.connect(book_db)
+    cur = conn.cursor()
+    query = "SELECT image_url, title, link FROM book_info WHERE read_count = 0 AND image_url NOT LIKE '%nophoto%'"
+    cur.execute(query)
+    book_img = cur.fetchall()
+    cur.close()
+    conn.close()
+    return book_img
 
 # Static file
 @route("/static/<filename:path>")

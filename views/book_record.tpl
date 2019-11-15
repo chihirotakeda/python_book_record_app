@@ -15,7 +15,7 @@
     </div>
 <nav class="nav1" role="navigation">
 <ul>
-    <li><a href="">Home</a></li>
+    <li><a href="/book_home">Home</a></li>
     <li><a href="/book_list">Book List</a></li>
     <li><a href="/blog">Blog</a></li>
 </ul>
@@ -33,7 +33,11 @@
         </tr>
        %for book in books:
         <tr>
-            <td><img src="{{book["img"]}}" alt="book{{["title"]}}"></td>
+            <td>
+            <a href={{book["link"]}} target="_blank">
+                <img src="{{book["img"]}}" alt="book{{["title"]}}"/>
+            </a>
+            </td>
             <td>{{book["title"]}}</td>
             <td>{{book["author"]}}</td>
             <td>{{book["isbn"]}}</td>

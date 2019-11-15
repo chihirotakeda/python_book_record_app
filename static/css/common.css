@@ -60,6 +60,12 @@ header, footer, nav {
 
 }
 
+.info {
+    display: flex;
+    margin-top: 15px;
+
+}
+
 .site-title {
     color: #333;
     font-size: 3.6rem;
@@ -145,6 +151,10 @@ header, footer, nav {
     margin-left: 1em;
 }
 
+.nav1 a:hover {
+    color: #666666;
+}
+
 #contents {
     /*width: 960px;*/
     margin: 0px auto;
@@ -173,6 +183,7 @@ header, footer, nav {
     border-collapse: collapse;
     font-family: Arial;
     color: #696969;
+    text-align: center;
 }
 
 .bookTable th,
@@ -185,6 +196,11 @@ header, footer, nav {
     width: 10em;
     background-color: #ffeeee;
 }
+
+/*.bookTable img {
+    display: block;
+    margin: 0 auto;
+}*/
 
 #bookform label {
     display: block;
@@ -203,7 +219,6 @@ header, footer, nav {
     border: solid 1px #eee;
     box-sizing: border-box;
     margin-right: 1%;
-    margin-bottom: 15px;
     float: left;
     width: 46%;
 }
@@ -372,4 +387,42 @@ header, footer, nav {
 .book-reference {
     font-size: 1.2rem;
 
+}
+
+#list_book-info img {
+    margin: auto;
+    text-align: center;
+}
+
+.see-more {
+    margin-top: 25px;
+}
+
+.see-more a {
+    text-decoration: none;
+    text-transform: uppercase;
+/*    border-bottom: solid 1px;
+    display: inline-block;*/
+    font-size: 1.4rem;
+}
+
+.read-more {
+    margin-bottom: 2.5px;
+}
+
+.read-more a {
+    text-decoration: none;
+    text-transform: uppercase;
+/*    border-bottom: solid 1px;
+    display: inline-block;*/
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #e47e75;
+    }
+
+a:hover {
+    color: #404040;
 }
